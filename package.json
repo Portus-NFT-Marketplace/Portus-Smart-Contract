@@ -1,0 +1,28 @@
+{
+  "name": "portus-smart-contract",
+  "version": "1.0.0",
+  "description": "Smart contract and contract testing of Portus web application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Portus-NFT-Marketplace/Portus-Smart-Contract.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Portus-NFT-Marketplace/Portus-Smart-Contract/issues"
+  },
+  "homepage": "https://github.com/Portus-NFT-Marketplace/Portus-Smart-Contract#readme",
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.5",
+    "@nomiclabs/hardhat-waffle": "^2.0.3",
+    "chai": "^4.3.6",
+    "ethereum-waffle": "^3.4.4",
+    "ethers": "^5.6.4",
+    "hardhat": "^2.9.3"
+  }
+}
