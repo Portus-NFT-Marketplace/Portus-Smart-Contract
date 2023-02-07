@@ -6,12 +6,12 @@ import "https://github.com/nibbstack/erc721/src/contracts/tokens/nf-token-metada
 
 import "https://github.com/nibbstack/erc721/src/contracts/ownership/ownable.sol";
  
-contract PortusNftV1 is NFTokenMetadata, Ownable {
+contract PortusNftV3 is NFTokenMetadata, Ownable {
 
   mapping (uint256 => uint256) internal idToPrice;
  
   constructor() {
-    nftName = "Portus Art Collection";
+    nftName = "PortusArtCollection";
     nftSymbol = "PORTUS";
   }
 
@@ -23,7 +23,7 @@ contract PortusNftV1 is NFTokenMetadata, Ownable {
     return idToPrice[_tokenId];
   }
  
-  function mint(address _to, uint256 _tokenId, string calldata _uri, uint256 _price) external onlyOwner{
+  function mint(address _to, uint256 _tokenId, string calldata _uri, uint256 _price) public{
     super._mint(_to, _tokenId);
     super._setTokenUri(_tokenId, _uri);
     _setPrice(_tokenId, _price);
