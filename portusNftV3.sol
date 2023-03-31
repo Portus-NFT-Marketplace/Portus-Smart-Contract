@@ -35,6 +35,9 @@ contract PortusNftV3 is NFTokenMetadata, Ownable {
     address buyer_address = msg.sender; // buyer address
     uint256 token_price = idToPrice[_tokenId]; // wei
 
+    // owner should not be able to buy his/her own artwork
+    require(buyer_address != seller_address, "you can not buy your own NFT");
+
     //check if msg.value >= token_price in wei
     require(msg.value >= token_price, "not enough token to buy NFT");
 
